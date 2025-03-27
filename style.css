@@ -1,0 +1,444 @@
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, img, a, span, section, header, main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #333;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Header {
+  width: 100%;
+  background-color: #fff;
+    display: grid;
+    height: 70px;
+    width: 100%;
+}
+
+.Header--common {
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 36px;
+  max-width: 100%;
+  position: relative;
+  height:100%;
+  align-items: center;
+}
+
+img.lazy {
+  min-height: 1px;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+.HeaderLogo:hover  {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+
+.HeaderLogo__image--pc {
+  display: block;
+  height: 20px;
+  width: auto;
+}
+
+.HeaderLogo__image--sp {
+  display: none;
+  height: 16px;
+  width: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .HeaderLogo__image--pc {
+    display: none !important;
+  }
+
+  .HeaderLogo__image--sp {
+    display: block !important;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.HeaderNav {
+  height: 100%;
+}
+
+
+.HeaderNavList {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavList {
+      overflow-y: scroll;
+      position: fixed;
+      top: 60px;
+      left: 100%;
+      width: 100%;
+      display: block;
+      padding-top: 20px;
+      padding-bottom: 75px;
+      transition: transform 0.5s;
+      z-index: 99;
+      background-color: rgba(0, 0, 0, 0.8);
+      -webkit-overflow-scrolling: touch;
+      height: 100%;
+  }
+
+  .Header--common {
+    position: fixed !important;
+  }
+
+  .Header {
+    background-color: #fff;
+    z-index: 10;
+  }
+}
+
+.HeaderNavListItem {
+  margin-right: 45px;
+}
+
+.HeaderNavListItem__link {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.HeaderNavListItem__link:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavListItem {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .HeaderNavListItem {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavListItem__link {
+      padding: 20px 0;
+  }
+}
+
+.HeaderNavListItem__link span {
+  display: block;
+  font-weight: 550;
+  text-align: center;
+}
+
+.HeaderNavListItem__link span:first-child {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 14.4px;
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavListItem__link>span:first-child {
+      font-size: 16px;
+      letter-spacing: 5px;
+      color: #fff;
+  }
+  .HeaderNavListItem__link>span:last-child {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #F79214;
+    letter-spacing: 2px;
+  }
+  main {
+    padding-top: 60px;
+  }
+  main {
+    padding-top: 52px;
+  }
+
+}
+
+.HeaderNavListItem__link span:last-child {
+  font-size: 10px;
+}
+
+.HeaderNavListItem:last-of-type {
+  margin-right: 0;
+}
+
+.HeaderNavListItem__button {
+  text-decoration: none;
+  align-items: center;
+  background-color: #F79214;
+  border: none;
+  border-radius: 38px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 700;
+  height: 40px;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+
+.HeaderNavListItem__button:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+main {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+      padding-top: 52px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main {
+    padding-top: 48px;
+  }
+}
+
+
+.FirstView {
+  position: relative;
+  height: 739px;
+}
+
+@media screen and (max-width: 767px) {
+  .FirstView {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .FirstView__bg-image {
+    display: none;
+  }
+}
+
+.FirstView__bg-image {
+  position: absolute;
+  z-index: -1;
+}
+
+
+.FirstView__bg-image--left-rectangle {
+  top: -70px;
+  left: 0;
+}
+
+.FirstView__bg-image--right-rectangle {
+  right: 0;
+  bottom: 70px;
+}
+
+.FirstView__bg-image--fill-rectangle {
+  top: 84px;
+  left: -70px;
+}
+
+.FirstView__bg-image--main-visual {
+  top: -70px;
+  right: 0;
+  width: 775px;
+}
+
+.FirstView__whole-image {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .FirstView__whole-image {
+    display: block;
+    margin-bottom: 7px;
+    width: 100%;
+  }
+}
+
+.FirstView__container {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-top: 219px;
+}
+
+@media screen and (max-width: 1080px) {
+  .FirstView__container {
+    max-width: none;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .FirstView__container {
+    max-width: none;
+    padding-top: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 20px;
+  }
+}
+
+
+.FirstViewContent {
+  position: relative;
+  width: fit-content;
+}
+
+.FirstViewContent__title {
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 63px;
+}
+
+@media screen and (max-width: 767px) {
+  .FirstViewContent__title {
+      font-size: 22px;
+      line-height: 36px;
+      position: relative;
+      width: fit-content;
+  }
+}
+
+.FirstViewContent__badge-image {
+  position: absolute;
+    top: -105px;
+    right: -150px;
+}
+
+@media screen and (max-width: 767px) {
+  .FirstViewContent__badge-image {
+      height: 102px;
+      width: 102px;
+      top: -20px;
+      right: -85px;
+  }
+}
+
+.FirstViewContent__button {
+  background-color: #F79214;
+  border: none;
+  border-radius: 38px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 16px;
+  text-align: center;
+  justify-content: center;
+}
+
+.FirstViewContent__button:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+
+.FirstViewContent__caption {
+  font-size: 12px;
+  line-height: 16px;
+  color: #333;
+}
+
+.HeaderNavHamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1080px)  {
+  .HeaderNavHamburger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 17px;
+    margin: auto;
+    z-index: 100;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .HeaderNavHamburger {
+      height: 12px;
+      width: 18px;
+  }
+}
+
+
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger__line {
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #A2A2A4;
+      transform: translate(0, -50%);
+      border-radius: 10px;
+      transition: top 0.2s, transform 0.2s, opacity 0.3s;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger__line:first-child {
+      top: 0;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .HeaderNavHamburger__line:last-child {
+      top: 100%;
+  }
+}
+
+.HeaderContainer>*:last-child {
+  display: inline-flex;
+}
+
